@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="2" verbose="3" name="My CRM test chrome(failed)" parallel="methods">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.tests.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyLoginTest"/>
+          <include name="verifyloginPageTitleTest"/>
+          <include name="verifyloginLogo"/>
+        </methods>
+      </class> <!-- com.tests.LoginPageTest -->
+    </classes>
+  </test> <!-- My CRM test chrome(failed) -->
+  <test thread-count="2" verbose="3" name="My CRM test firefox(failed)" parallel="methods">
+    <parameter name="browser" value="ff"/>
+    <classes>
+      <class name="com.tests.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyLoginTest"/>
+          <include name="verifyloginPageTitleTest"/>
+          <include name="verifyloginLogo"/>
+        </methods>
+      </class> <!-- com.tests.LoginPageTest -->
+    </classes>
+  </test> <!-- My CRM test firefox(failed) -->
+</suite> <!-- Failed suite [Suite] -->
